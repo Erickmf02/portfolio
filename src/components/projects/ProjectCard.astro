@@ -5,9 +5,11 @@ interface Props {
   entry: CollectionEntry<'project'>
 }
 const { entry } = Astro.props;
+
+const baseUrl = import.meta.env.BASE_URL;
 ---
 
-<a href={`project/${entry.slug}`} class="p-4 bg-white rounded-lg shadow-lg transition hover:shadow-xl" >
+<a href={`${baseUrl}/project/${entry.slug}`} class="p-4 bg-white rounded-lg shadow-lg transition hover:shadow-xl" >
   <div class="flex items-center">
     <!-- Imagen al lado del título -->
     <img transition:name={`${entry.slug}-image`} src={entry.data.image} alt="Proyecto 1" class="rounded-md object-cover w-16 h-16 mr-4">
