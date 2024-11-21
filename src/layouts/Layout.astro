@@ -1,6 +1,6 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-import Navbar from '../components/global/Navbar.vue';
+import Navbar from '../components/global/Navbar.astro';
 
 interface Props {
 	title: string;
@@ -22,7 +22,7 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<div class="grid min-h-dvh grid-rows-[auto_1fr_auto]">
-			<Navbar client:load></Navbar>
+			<Navbar></Navbar>
 			<div>
 				<slot />
 			</div>
