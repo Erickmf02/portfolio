@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'project'>
+}
+const { entry } = Astro.props;
+---
+
+<a href={`project/${entry.slug}`} class="p-4 bg-white rounded-lg shadow-lg transition hover:shadow-xl" >
+  <div class="flex items-center">
+    <!-- Imagen al lado del título -->
+    <img transition:name={`${entry.slug}-image`} src={entry.data.image} alt="Proyecto 1" class="rounded-md object-cover w-16 h-16 mr-4">
+    
+    <div>
+      <h3 class="text-xl font-semibold text-gray-800">{entry.data.title}</h3>
+      <p  class="text-gray-600 text-sm">{entry.data.summary}</p>
+    </div>
+  </div>
+
+  <!-- Tecnologías -->
+  <div class="flex flex-wrap gap-2 mt-2">
+    {entry.data.tags.map(tag => (
+      <span class="bg-blue-100 text-blue-500 text-xs px-2 py-1 rounded-full">{tag}</span>
+    ))}
+  </div>
+</a>
+

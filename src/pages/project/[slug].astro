@@ -1,0 +1,31 @@
+---
+import { getCollection, getEntry } from "astro:content";
+import Layout from '../../layouts/Layout.astro';
+import ProjectSummary from "../../components/pages/project/ProjectSummary.astro";
+import ProjectGalery from "../../components/pages/project/ProjectGalery.vue"
+export async function getStaticPaths() {
+  const projectEntries = await getCollection('project');
+
+  return projectEntries.map((entry) => ({
+    params: {slug: entry.slug}
+  }));
+}
+
+const { slug } = Astro.params;
+const entry = await getEntry('project', slug)
+const project = entry.data;
+---
+<Layout title={`Proyecto - ${project.title}`}>
+  <div class="flex justify-center p-4 h-full bg-slate-100">
+    <main class="max-w-screen-lg">
+      
+      <ProjectSummary entry={entry}></ProjectSummary>
+      <div>
+        <p>{project.description}</p>
+      </div>
+      {project.images && 
+        <ProjectGalery client:visible slug={slug}></ProjectGalery>
+      }
+    </main>
+  </div>
+</Layout>

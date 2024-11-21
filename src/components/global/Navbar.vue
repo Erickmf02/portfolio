@@ -1,0 +1,18 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+  <nav class="px-4 py-2 flex items-center justify-between sticky top-0 bg-white z-40 bg-opacity-80 backdrop-blur-sm" style="view-transition-name: navbar;">
+    <span class="text-lg font-medium">
+      Erick
+    </span>
+    <ul class="flex">
+      <li>
+        <a class="px-4 py-2 text-base" href="/">
+          Inicio
+        </a>
+      </li>
+    </ul>
+  </nav>
+</template>

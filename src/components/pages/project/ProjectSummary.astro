@@ -1,0 +1,15 @@
+---
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'project'>
+}
+const { entry } = Astro.props;
+const project = entry.data;
+---
+
+<div class="flex items-center justify-center flex-col" >
+  <img transition:name={`${entry.slug}-image`} class="h-16 w-16 object-cover rounded-md" src={project.image} alt="">
+  <h1 class="text-4xl font-medium">{project.title}</h1>
+  <h2 class="text-xl">{project.summary}</h2>
+</div>
