@@ -1,0 +1,1 @@
+const t="erick-martinez-fuentes",e="user",n={name:"Erick Martinez Fuentes",description:"JAJAJAJ"},r={type:"data",filePath:"C:/Users/Erick/Desktop/portfolio-astro/src/content/user/erick-martinez-fuentes.json",rawData:""};export{r as _internal,e as collection,n as data,t as id};
