@@ -1,0 +1,45 @@
+{
+  "$schema": "../../../.astro/collections/project.schema.json",
+  "title": "PowerPulse",
+  "subtitle": "Una app de ejercicios",
+  "image": "https://static.vecteezy.com/system/resources/previews/014/441/078/original/phone-call-icon-design-in-blue-circle-png.png",
+  "overview": {
+    "description": "GasGuard es una plataforma que avisa al usuario cuando en su hogar se detecta una fuga de gas y avisa al usuario a su mobil mediante notificaciones y vibracion.",
+    "features": [
+      {
+        "title": "Aplicacion movil",
+        "subtitle": "Crea o realiza cursos con soporte para subir archivos y videos en streaming.",
+        "icon": "network"
+      },
+      {
+        "title": "Alertas",
+        "subtitle": "Proyectos creados en cursos se integran automáticamente al portafolio del usuario.",
+        "icon": "file"
+      },
+      {
+        "title": "Tiempo real",
+        "subtitle": "Crea y aplica a ofertas laborales directamente desde la plataforma.",
+        "icon": "bell"
+      }
+    ]
+  },
+  "tags": [
+    "MOBILE",
+    "FLUTTER",
+    "NESTJS",
+    "SQLITE",
+    "JAVASCRIPT",
+    "TYPESCRIPT",
+    "DOCKER",
+    "DART"
+  ],
+  "team": [
+    "erick-martinez-fuentes"
+  ],
+  "repositories": [
+    {
+      "title": "fronted",
+      "url": "asdasd"
+    }
+  ]
+}

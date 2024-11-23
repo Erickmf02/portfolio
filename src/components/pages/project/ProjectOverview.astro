@@ -1,0 +1,27 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import Icon from '../../global/Icon.vue';
+
+interface Props {
+  entry: CollectionEntry<'project'>
+}
+const { entry } = Astro.props;
+const project = entry.data;
+---
+
+<div class="p-4 rounded-lg bg-slate-50">
+  <p class="mb-6">{project.overview.description}</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    {project.overview.features.map((feature) => 
+      <div class="flex items-start gap-3">
+        <div class="mt-1">
+          <Icon className="h-5 w-5" icon={feature.icon}></Icon>
+        </div>
+        <div>
+          <h3 class="font-semibold">{feature.title}</h3>
+          <p class="text-sm text-slate-500">{feature.subtitle}</p>
+        </div>
+      </div>
+    )}
+  </div>
+</div>

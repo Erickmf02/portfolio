@@ -2,11 +2,11 @@
 import { getEntry } from 'astro:content';
 import { ref, onMounted, onUnmounted } from 'vue';
 
-const { slug } = defineProps<{
-  slug: string
+const { id } = defineProps<{
+  id: string
 }>();
 
-const entry = await getEntry('project', slug);
+const entry = await getEntry('project', id);
 
 const isOpen = ref(false);
 const selectedImage = ref<string | null>(null);
@@ -47,7 +47,7 @@ onUnmounted(() => {
 
 <template>
   <div>
-    <h2 class="text-4xl text-center mb-2">Galería de imagenes </h2>
+    <h2 class="text-3xl text-center mb-4">Galería de imagenes </h2>
     <div class="columns-2 md:columns-3 gap-2 space-y-2">
       <a
         v-for="image in entry?.data.images"
@@ -59,7 +59,7 @@ onUnmounted(() => {
       >
         <img
           :src="image"
-          :alt="'Imagen de ' + slug"
+          :alt="'Imagen de ' + id"
           class="w-full cursor-pointer"
         />
       </a>
@@ -86,8 +86,8 @@ onUnmounted(() => {
         <img
           v-if="selectedImage"
           :src="selectedImage"
-          :alt="'Imagen seleccionada de ' + slug"
-          class="rounded-md max-h-screen max-w-screen object-contain"
+          :alt="'Imagen seleccionada de ' + id"
+          class="max-h-screen max-w-screen object-contain"
         />
       </div>
     </div>

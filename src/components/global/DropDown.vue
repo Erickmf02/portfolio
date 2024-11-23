@@ -2,12 +2,17 @@
 import 'tippy.js/animations/shift-away.css';
 import tippy, { type Instance, type Props } from 'tippy.js';
 import { onMounted, ref, useTemplateRef } from 'vue';
+import Button from './Button.vue';
+
+const {variant = "principal" } = defineProps<{
+  variant?: 'principal' |'principal-outlined'
+}>()
 
 const button = useTemplateRef('button')
 const menu = useTemplateRef('menu')
 const overlay = ref<Instance<Props>>();
 onMounted(() => {
-  overlay.value = tippy(button.value as HTMLElement, {
+  overlay.value = tippy(button.value!.$el, {
     content: (menu.value as HTMLElement).innerHTML,
     trigger: 'click',
     allowHTML: true,
@@ -21,7 +26,9 @@ onMounted(() => {
 
 <template>
   <div ref="menu" style="display: none;">
-    <slot></slot>
+    <slot name="menu"></slot>
   </div>
-  <button ref="button" class="bg-blue-500 p-4 rounded-lg text-white">Boton</button>
+  <Button ref="button" :variant="variant">
+    <slot></slot>
+  </Button>
 </template>

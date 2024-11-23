@@ -6,10 +6,10 @@ const projectEntries = await getCollection('project');
 ---
 
 <section class="p-4">
-  <h2 class="text-3xl font-semibold text-center text-blue-500 mb-6">Proyectos destacados</h2>
+  <h2 class="text-3xl text-center mb-6">Proyectos destacados</h2>
   
   <!-- Contenedor de tarjetas -->
-  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="grid gap-6 ">
     <!-- Iterar sobre las entradas de proyectos -->
     {projectEntries.map((entry) =>(
       <ProjectCard entry={entry}></ProjectCard>

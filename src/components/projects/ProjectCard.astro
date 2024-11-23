@@ -6,20 +6,24 @@ interface Props {
 }
 const { entry } = Astro.props;
 
-const baseUrl = import.meta.env.BASE_URL;
+const base = import.meta.env.BASE_URL;
 ---
 
-<a href={`${baseUrl}/project/${entry.slug}`} class="p-4 bg-white rounded-lg shadow-lg transition hover:shadow-xl" >
-  <div class="flex items-center">
+<a href={`${base}/project/${entry.id}`} class="p-4 bg-slate-50 rounded-lg transition hover:shadow-lg group" >
+  <div class="flex items-center relative">
     <!-- Imagen al lado del título -->
-    <img transition:name={`${entry.slug}-image`} src={entry.data.image} alt="Proyecto 1" class="rounded-md object-cover w-16 h-16 mr-4">
+    <img transition:name={`${entry.id}-image`} src={entry.data.image} alt="Proyecto 1" class="rounded-md object-cover w-16 h-16 mr-4">
     
     <div>
       <h3 class="text-xl font-semibold text-gray-800">{entry.data.title}</h3>
-      <p  class="text-gray-600 text-sm">{entry.data.summary}</p>
+      <p  class="text-gray-600 text-sm">{entry.data.subtitle}</p>
     </div>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5 absolute right-0 top-0 transition text-slate-500 group-hover:text-blue-500" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
+      <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/>
+    </svg>
   </div>
-
+  
   <!-- Tecnologías -->
   <div class="flex flex-wrap gap-2 mt-2">
     {entry.data.tags.map(tag => (

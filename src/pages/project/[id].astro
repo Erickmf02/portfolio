@@ -3,29 +3,32 @@ import { getCollection, getEntry } from "astro:content";
 import Layout from '../../layouts/Layout.astro';
 import ProjectSummary from "../../components/pages/project/ProjectSummary.astro";
 import ProjectGalery from "../../components/pages/project/ProjectGalery.vue"
+import ProjectOverview from "../../components/pages/project/ProjectOverview.astro";
+
 export async function getStaticPaths() {
   const projectEntries = await getCollection('project');
 
   return projectEntries.map((entry) => ({
-    params: {slug: entry.slug}
+    params: {id: entry.id}
   }));
 }
 
-const { slug } = Astro.params;
-const entry = await getEntry('project', slug)
+const { id } = Astro.params;
+const entry = await getEntry('project', id)
 const project = entry.data;
 ---
 <Layout title={`Proyecto - ${project.title}`}>
   <div class="flex justify-center p-4 h-full bg-slate-100">
-    <main class="max-w-screen-lg">
+    <main class="max-w-screen-md flex flex-col gap-6">
       
       <ProjectSummary entry={entry}></ProjectSummary>
-      <div>
-        <p>{project.description}</p>
-      </div>
+      
+      <ProjectOverview entry={entry}></ProjectOverview>
+
       {project.images && 
-        <ProjectGalery client:visible slug={slug}></ProjectGalery>
+        <ProjectGalery client:visible id={id}></ProjectGalery>
       }
+
     </main>
   </div>
 </Layout>

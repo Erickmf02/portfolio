@@ -4,8 +4,10 @@ import AboutMeSummary from "../components/pages/index/AboutMeSummary.astro";
 import FeaturedProjects from "../components/pages/index/FeaturedProjects.astro";
 ---
 <Layout title="Portafolio">
-<main class="p-2 bg-slate-100 h-full">
-	<AboutMeSummary></AboutMeSummary>
-	<FeaturedProjects></FeaturedProjects>
-</main>
+<div class="flex justify-center p-2 bg-slate-100 h-full">
+	<main class="max-w-screen-md">
+		<AboutMeSummary></AboutMeSummary>
+		<FeaturedProjects></FeaturedProjects>
+	</main>
+</div>
 </Layout>

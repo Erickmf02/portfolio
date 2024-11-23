@@ -1,22 +1,27 @@
 import {z, defineCollection, reference} from 'astro:content'
 
-
-const projectSchema = z.object({
-  title: z.string(),
-  summary: z.string(),
-  description: z.string(),
-  url: z.string().optional(),
-  repositories: z.array(z.object({title: z.string(), url: z.string()})).optional(),
-  image: z.string(),
-  images: z.array(z.string()).optional(),
-  tags: z.array(z.string()),
-  team: z.array(reference('user'))
-});
-
-
 const projectCollection = defineCollection({
-  type: 'content',
-  schema:  projectSchema
+  type: 'data',
+  schema:  z.object({
+    title: z.string(),
+    subtitle: z.string(),
+    overview: z.object({
+      description: z.string(),
+      features: z.array(
+        z.object({
+          title: z.string(),
+          subtitle: z.string(),
+          icon: z.enum(['bell', 'network', 'cloud', 'file', 'iot'])
+        })
+      )
+    }),
+    url: z.string().optional(),
+    repositories: z.array(z.object({title: z.string(), url: z.string()})).optional(),
+    image: z.string().url(),
+    images: z.array(z.string()).optional(),
+    tags: z.array(z.string()),
+    team: z.array(reference('user'))
+  })
 })
 
 const userSchema = z.object({
@@ -25,9 +30,10 @@ const userSchema = z.object({
 })
 
 const userCollection = defineCollection({
-  type: 'content',
+  type: 'data',
   schema: userSchema
 })
+
 
 
 

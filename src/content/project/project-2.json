@@ -1,0 +1,53 @@
+{
+  "$schema": "../../../.astro/collections/project.schema.json",
+  "title": "GasGuard",
+  "subtitle": "Seguridad contra fugas de gas",
+  "image": "https://static.vecteezy.com/system/resources/previews/008/341/823/non_2x/dewar-vessel-laboratory-tool-glyph-icon-illustration-vector.jpg",
+  "overview": {
+    "description": "GasGuard es una plataforma que avisa al usuario cuando en su hogar se detecta una fuga de gas y avisa al usuario a su mobil mediante notificaciones y vibracion.",
+    "features": [
+      {
+        "title": "Aplicacion movil",
+        "subtitle": "Crea o realiza cursos con soporte para subir archivos y videos en streaming.",
+        "icon": "iot"
+      },
+      {
+        "title": "Alertas",
+        "subtitle": "Proyectos creados en cursos se integran automáticamente al portafolio del usuario.",
+        "icon": "bell"
+      },
+      {
+        "title": "Tiempo real",
+        "subtitle": "Crea y aplica a ofertas laborales directamente desde la plataforma.",
+        "icon": "cloud"
+      }
+    ]
+  },
+  "tags": [
+    "MOBILE",
+    "FLUTTER",
+    "NESTJS",
+    "SQLITE",
+    "JAVASCRIPT",
+    "TYPESCRIPT",
+    "DOCKER",
+    "DART"
+  ],
+  "team": [
+    "erick-martinez-fuentes"
+  ],
+  "repositories": [
+    {
+      "title": "fronted",
+      "url": "asdasd"
+    }
+  ],
+  "images": [
+    "https://i.pinimg.com/736x/88/1d/fc/881dfce1cd686f5f5f3d3c7704efa763.jpg",
+    "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg",
+    "https://s1.zerochan.net/Huohuo.600.4083401.jpg",
+    "https://i.ytimg.com/vi/1I1kkkhGv70/maxresdefault.jpg",
+    "https://animesher.com/orig/1/182/1821/18213/animesher.com_magic-war-saga-of-tanya-the-evil-1821344.jpg"
+  ]
+  
+}
