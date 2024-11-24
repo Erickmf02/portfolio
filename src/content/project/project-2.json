@@ -23,15 +23,40 @@
       }
     ]
   },
+  "featured": true,
   "tags": [
-    "MOBILE",
-    "FLUTTER",
-    "NESTJS",
-    "SQLITE",
-    "JAVASCRIPT",
-    "TYPESCRIPT",
-    "DOCKER",
-    "DART"
+    {
+      "title": "arduino",
+      "principal": true
+    },
+    {
+      "title": "mobile",
+      "principal": true
+    },
+    {
+      "title": "nest",
+      "principal": true
+    },
+    {
+      "title": "javascript",
+      "principal": true
+    },
+    {
+      "title": "typescript",
+      "principal": true
+    },
+    {
+      "title": "flutter",
+      "principal": true
+    },
+    {
+      "title": "dart",
+      "principal": true
+    },
+    {
+      "title": "sqlite",
+      "principal": true
+    }
   ],
   "team": [
     "erick-martinez-fuentes"

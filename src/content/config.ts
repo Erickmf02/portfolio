@@ -15,11 +15,18 @@ const projectCollection = defineCollection({
         })
       )
     }),
+    tags: z.array(
+      z.object({
+        title: z.string(),
+        principal: z.boolean(),
+        url: z.string().url().optional()
+      })
+    ),
+    featured: z.boolean(),
     url: z.string().optional(),
     repositories: z.array(z.object({title: z.string(), url: z.string()})).optional(),
     image: z.string().url(),
     images: z.array(z.string()).optional(),
-    tags: z.array(z.string()),
     team: z.array(reference('user'))
   })
 })

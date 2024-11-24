@@ -2,7 +2,7 @@
 import { getCollection } from "astro:content";
 import ProjectCard from "../../projects/ProjectCard.astro";
 
-const projectEntries = await getCollection('project');
+const projectEntries = (await getCollection('project')).filter(entry => entry.data.featured == true);
 ---
 
 <section class="p-4">

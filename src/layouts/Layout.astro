@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
 import Navbar from '../components/global/Navbar.astro';
+import myIcon from "../assets/images/favicon.svg";
 
 interface Props {
 	title: string;
@@ -14,9 +15,20 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Icon -->
+		<link rel="icon" type="image/svg+xml" href={myIcon.src} />	
 		<meta name="generator" content={Astro.generator} />
+
+		<!-- Descripcion -->
+		<meta name="description" content="Portafolio de Erick - Desarrollador especializado en JavaScript, NestJS y Flutter. Conoce mis proyectos y habilidades.">
+
+		<!-- Palabras claves -->
+		<meta name="keywords" content="Erick Martínez Fuentes, Erick142, Erickmf02, desarrollador, portafolio, ingeniero de software">
+
+		<!-- Autor -->
+		<meta name="author" content="Erick Martínez Fuentes">
 		<title>{title}</title>
 		<ViewTransitions></ViewTransitions>
 	</head>
@@ -26,8 +38,8 @@ const { title } = Astro.props;
 			<div>
 				<slot />
 			</div>
-			<footer>
-				asd
+			<footer class="bg-slate-900 text-white h-16 flex justify-center items-center">
+				Footer
 			</footer>
 		</div>
 	</body>

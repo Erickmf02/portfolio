@@ -2,7 +2,7 @@
   "$schema": "../../../.astro/collections/project.schema.json",
   "title": "PowerPulse",
   "subtitle": "Una app de ejercicios",
-  "image": "https://static.vecteezy.com/system/resources/previews/014/441/078/original/phone-call-icon-design-in-blue-circle-png.png",
+  "image": "https://static.vecteezy.com/system/resources/previews/003/887/574/non_2x/bright-yellow-color-background-icon-vector.jpg",
   "overview": {
     "description": "GasGuard es una plataforma que avisa al usuario cuando en su hogar se detecta una fuga de gas y avisa al usuario a su mobil mediante notificaciones y vibracion.",
     "features": [
@@ -23,15 +23,40 @@
       }
     ]
   },
+  "featured": true,
   "tags": [
-    "MOBILE",
-    "FLUTTER",
-    "NESTJS",
-    "SQLITE",
-    "JAVASCRIPT",
-    "TYPESCRIPT",
-    "DOCKER",
-    "DART"
+    {
+      "title": "mobile",
+      "principal": true
+    },
+    {
+      "title": "express",
+      "principal": true
+    },
+    {
+      "title": "javascript",
+      "principal": true
+    },
+    {
+      "title": "typescript",
+      "principal": true
+    },
+    {
+      "title": "flutter",
+      "principal": true
+    },
+    {
+      "title": "dart",
+      "principal": true
+    },
+    {
+      "title": "mongodb",
+      "principal": true
+    },
+    {
+      "title": "docker",
+      "principal": true
+    }
   ],
   "team": [
     "erick-martinez-fuentes"

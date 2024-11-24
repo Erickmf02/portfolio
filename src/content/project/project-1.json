@@ -35,18 +35,52 @@
     }
   ],
   "tags": [
-    "WEB",
-    "VUEJS",
-    "NESTJS",
-    "POSTGRESQL",
-    "JAVASCRIPT",
-    "TYPESCRIPT",
-    "DOCKER",
-    "BOOTSTRAP",
-    "HTML",
-    "SASS",
-    "CSS"
+    {
+      "title": "web",
+      "principal": true
+    },
+    {
+      "title": "nest",
+      "principal": true
+    },
+    {
+      "title": "javascript",
+      "principal": true
+    },
+    {
+      "title": "typescript",
+      "principal": true
+    },
+    {
+      "title": "vue",
+      "principal": true
+    },
+    {
+      "title": "docker",
+      "principal": true
+    },
+    {
+      "title": "html",
+      "principal": true
+    },
+    {
+      "title": "css",
+      "principal": true
+    },
+    {
+      "title": "sass",
+      "principal": true
+    },
+    {
+      "title": "postgresql",
+      "principal": true
+    },
+    {
+      "title": "vite",
+      "principal": true
+    }
   ],
+  "featured": true,
   "team": [
     "erick-martinez-fuentes"
   ],

@@ -7,13 +7,15 @@ interface Props {
 }
 const { entry } = Astro.props;
 const project = entry.data;
+
+//transition:name={`${entry.id}-image`} 
 ---
 
 <div class="flex items-center justify-center flex-col" >
-  <img transition:name={`${entry.id}-image`} class="h-16 w-16 object-cover rounded-md" src={project.image} alt={`${project.title} principal image`}>
+  <img class="z-20 h-16 w-16 object-cover rounded-md" src={project.image} alt={`${project.title} principal image`}>
   <h1 class="text-4xl font-medium">{project.title}</h1>
   <h2 class="text-xl text-slate-500">{project.subtitle}</h2>
-  <div class="mt-4 flex gap-2">
+  <div class="mt-4 flex flex-col sm:flex-row gap-2">
 
     <!-- Si el proyecto tiene url -->
     {project.url && 

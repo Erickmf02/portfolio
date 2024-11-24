@@ -49,20 +49,19 @@ onUnmounted(() => {
   <div>
     <h2 class="text-3xl text-center mb-4">Galería de imagenes </h2>
     <div class="columns-2 md:columns-3 gap-2 space-y-2">
-      <a
+      <button
         v-for="image in entry?.data.images"
         :key="image"
         @click.prevent="open(image)"
-        href="#"
         class="block" 
         aria-label="Ver imagen del proyecto"
       >
         <img
           :src="image"
           :alt="'Imagen de ' + id"
-          class="w-full cursor-pointer"
+          class="w-full"
         />
-      </a>
+      </button>
     </div>
   </div>
 

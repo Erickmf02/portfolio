@@ -1,0 +1,19 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import ProjectCard from "../../components/projects/ProjectCard.astro";
+const projectEntries = await getCollection('project');
+
+---
+<Layout title="Erick Martínez Fuentes - Proyectos">
+<div class="bg-slate-100 h-full flex justify-center p-2">
+	<main class="max-w-screen-md w-full p-4">
+    <h1 class="text-3xl text-center mb-6">Todos mis proyectos</h1>
+    <div class="grid gap-6">
+      {projectEntries.map((entry)=>
+        <ProjectCard entry={entry}></ProjectCard>
+      )}
+    </div>
+	</main>
+</div>
+</Layout>
