@@ -1,5 +1,4 @@
 ---
-import { Image } from "astro:assets";
 import myImage from "../../../assets/images/tanya.webp";
 
 ---
@@ -8,7 +7,7 @@ import myImage from "../../../assets/images/tanya.webp";
   <!-- Imagen (círculo) -->
   <div class="flex justify-center sm:col-span-3 sm:items-center">
     <div class="aspect-square w-24 sm:w-full">
-      <Image loading={'eager'}  class="w-full h-full object-cover rounded-full overflow-hidden" src={myImage} alt="Imagen de Erick Martínez Fuentes">
+      <img  class="w-full h-full object-cover rounded-full overflow-hidden" src={myImage.src} alt="Imagen de Erick Martínez Fuentes">
     </div>
   </div>
   
